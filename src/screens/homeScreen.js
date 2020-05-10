@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet } from "react-native";
-import SearchBar from "../screens/SearchBar";
+import { Text, View, StyleSheet,ScrollView, SafeAreaView } from "react-native";
+import News from "./News";
 import CountryView from "../components/CountryView";
 import WorldSummary from '../components/WorldSummary';
 
 const HomeScreen = () => {
   return (
-    <>
+    <ScrollView>
       <CountryView />
       <WorldSummary />
-    </>
+      <News />
+    </ScrollView>
   );
 };
 

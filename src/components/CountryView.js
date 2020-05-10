@@ -5,7 +5,7 @@ import {
   Text,
   TextInput,
   StyleSheet,
-  TouchableHighlight,
+  TouchableOpacity,
   Button,
 } from "react-native";
 import getCountrytData from "../hooks/getCountrySummary";
@@ -20,17 +20,16 @@ const CountryView = (props) => {
   }
 
   return (
-    <TouchableHighlight
+    <TouchableOpacity
       onPress={() => {
         props.navigation.navigate("Country", {
           data: CountryData.data[0].table,
         });
       }}
-      activeOpacity={0.0}
-      underlayColor="transparent"
+      activeOpacity={1}
     >
       <CountryTemplate data={CountryData.data[0].table[0]} />
-    </TouchableHighlight>
+    </TouchableOpacity>
   );
 };
 

@@ -1,8 +1,7 @@
 import React from "react";
 import { withNavigation } from "react-navigation";
-import { Text, FlatList, View, StyleSheet } from "react-native";
+import { Text, FlatList, View, StyleSheet, TouchableOpacity } from "react-native";
 import Template from "./Template";
-import { TouchableHighlight } from "react-native-gesture-handler";
 
 const CountrySummary = ({ navigation }) => {
   //Shows state info
@@ -16,15 +15,14 @@ const CountrySummary = ({ navigation }) => {
         data={data}
         renderItem={({ item }) => {
           return (
-            <TouchableHighlight
+            <TouchableOpacity
               onPress={() => {
                 navigation.navigate("State", { data: item });
               }}
-              activeOpacity={0.0}
-              underlayColor="transparent"
+              activeOpacity={1}
             >
               <Template data={item} />
-            </TouchableHighlight>
+            </TouchableOpacity>
           );
         }}
       />
