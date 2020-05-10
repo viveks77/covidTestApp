@@ -4,12 +4,14 @@ import { createAppContainer } from "react-navigation";
 import HomeScreen from "./src/screens/homeScreen";
 import CountrySummary from "./src/components/CountrySummary";
 import StateTemplate from "./src/components/StateTemplate";
+import WorldListRender from './src/components/WorldListRender';
 
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
     Country: CountrySummary,
     State: StateTemplate,
+    World : WorldListRender
   },
   {
     initialRouteName: "Home",

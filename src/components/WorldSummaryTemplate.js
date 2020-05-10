@@ -13,7 +13,7 @@ const WorldSummaryTemplate = ({worldData}) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Global OverView</Text>
+        <Text style={styles.headerTitle}>Global Overview</Text>
       </View>
       <View>
         <View style={styles.contentWrap}>
