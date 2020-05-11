@@ -7,9 +7,9 @@ export default () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "https://api.covid19india.org/state_district_wise.json"
+        "https://akashraj.tech/corona/api_india"
       );
-      setList(response);
+      setList(response.data);
     } catch (e) {
       return e;
     }
