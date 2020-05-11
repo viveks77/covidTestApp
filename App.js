@@ -3,15 +3,15 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import HomeScreen from "./src/screens/homeScreen";
 import CountrySummary from "./src/components/CountrySummary";
-import StateTemplate from "./src/components/StateTemplate";
-import WorldListRender from './src/components/WorldListRender';
+import StateOverview from "./src/components/StateOverview";
+import WorldListRender from "./src/components/WorldListRender";
 
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
     Country: CountrySummary,
-    State: StateTemplate,
-    World : WorldListRender
+    State: StateOverview,
+    World: WorldListRender,
   },
   {
     initialRouteName: "Home",

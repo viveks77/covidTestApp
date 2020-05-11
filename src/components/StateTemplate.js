@@ -10,8 +10,12 @@ const convertIntoDigits = (num) => {
   });
 };
 
-const StateTemplate = ({ navigation }) => {
-  const data = navigation.getParam("data");
+const StateTemplate = ({ stateData }) => {
+  const data = stateData;
+  if (!data) {
+    return null;
+  }
+
   const distData = getDistrictData();
 
   if (!distData) {
