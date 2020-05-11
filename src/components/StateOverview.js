@@ -3,7 +3,7 @@ import StateTemplate from "./StateTemplate";
 
 class StateOverview extends React.Component {
   data = this.props.navigation.getParam("data");
-  static navigation = {
+  static navigationOptions = {
     title: "Overview",
   };
   render() {
