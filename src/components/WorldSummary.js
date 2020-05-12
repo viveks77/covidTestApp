@@ -10,12 +10,6 @@ const WorldSummary = ({navigation}) => {
     if(!worldData){
         return null;
     }
-    const Data = {
-        total : worldData.reports[0].cases,
-        deaths : worldData.reports[0].deaths,
-        recovered : worldData.reports[0].recovered
-    }
-
     const countryData = worldData.reports[0].table[0];
 
     return(
@@ -23,7 +17,7 @@ const WorldSummary = ({navigation}) => {
         onPress={() => {navigation.navigate("World", {data : countryData})}}
         activeOpacity={1}
     >
-    <WorldSummaryTemplate worldData={Data}/>
+    <WorldSummaryTemplate worldData={worldData.reports[0]}/>
     </TouchableOpacity>
     );
 };

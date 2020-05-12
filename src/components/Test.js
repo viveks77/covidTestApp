@@ -1,9 +1,9 @@
 import React from 'react';
 import {Text} from 'react-native';
 
-const Test = (props) => {
+const Test = () => {
     return(
-    <Text>{props.data.TotalCases}</Text>
+    <Text>This is it</Text>
     )
 }
 

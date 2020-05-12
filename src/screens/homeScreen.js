@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet,ScrollView, SafeAreaView } from "react-native";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 import News from "./News";
 import CountryView from "../components/CountryView";
-import WorldSummary from '../components/WorldSummary';
+import WorldSummary from "../components/WorldSummary";
 
 const HomeScreen = () => {
   return (

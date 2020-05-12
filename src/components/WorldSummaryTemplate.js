@@ -1,15 +1,15 @@
 import React from "react";
 import { View, Text, TextInput, StyleSheet } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-import numbro from 'numbro';
+import numbro from "numbro";
 
 const convertIntoDigits = (num) => {
-    return numbro(num).format({
-      thousandSeparated: true,
-    });
-  };
+  return numbro(num).format({
+    thousandSeparated: true,
+  });
+};
 
-const WorldSummaryTemplate = ({worldData}) => {
+const WorldSummaryTemplate = ({ worldData }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -18,15 +18,21 @@ const WorldSummaryTemplate = ({worldData}) => {
       <View>
         <View style={styles.contentWrap}>
           <Text style={styles.cases}>Total Cases</Text>
-    <Text style={styles.casesActive}>{convertIntoDigits(worldData.total)}</Text>
+          <Text style={styles.casesActive}>
+            {convertIntoDigits(worldData.cases)}
+          </Text>
         </View>
         <View style={styles.contentWrap}>
           <Text style={styles.cases}>Recovered</Text>
-     <Text style={styles.casesRecovered}>{convertIntoDigits(worldData.recovered)}</Text>
+          <Text style={styles.casesRecovered}>
+            {convertIntoDigits(worldData.recovered)}
+          </Text>
         </View>
         <View style={styles.contentWrap}>
           <Text style={styles.cases}>Deaths</Text>
-     <Text style={styles.casesDeaths}>{convertIntoDigits(worldData.deaths)}</Text>
+          <Text style={styles.casesDeaths}>
+            {convertIntoDigits(worldData.deaths)}
+          </Text>
         </View>
       </View>
     </View>
@@ -41,8 +47,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 15,
   },
-  header : {
-      marginVertical : 10
+  header: {
+    marginVertical: 10,
   },
   headerTitle: {
     fontSize: 30,
